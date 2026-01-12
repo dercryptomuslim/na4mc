@@ -8,12 +8,14 @@ import { Automation } from "@/components/sections/Automation";
 import { Consulting } from "@/components/sections/Consulting";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Footer } from "@/components/sections/Footer";
+import { TrustedBy } from "@/components/sections/TrustedBy";
 
 export default function Home() {
   return (
     <main className="min-h-screen bg-background">
       <Navbar />
       <Hero />
+      <TrustedBy />
       <Stats />
       <Services />
       <About />
@@ -25,4 +27,3 @@ export default function Home() {
     </main>
   );
 }
-
