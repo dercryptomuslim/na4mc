@@ -8,10 +8,10 @@ import { getCalApi } from "@calcom/embed-react";
 export default function BookingPage() {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi();
+      const cal = await getCalApi({"embedJsUrl":"https://app.cal.eu/embed/embed.js"});
       cal("ui", {
         theme: "light",
-        styles: { branding: { brandColor: "#ea580c" } }, // Orange-600
+        styles: { branding: { brandColor: "#ea580c" } },
         hideEventTypeDetails: false,
         layout: "month_view",
       });
@@ -33,14 +33,14 @@ export default function BookingPage() {
           </p>
         </div>
         
-        <div className="container px-4 mx-auto max-w-5xl bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden min-h-[700px]">
+        <div className="container px-4 mx-auto max-w-5xl bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden h-[700px]">
             {/* Cal.com Inline Embed */}
-            <div className="w-full h-full p-4">
-                <iframe 
-                  src="https://cal.com/mustafa-ali/30min?embed=true" 
-                  style={{width: "100%", height: "100%", minHeight: "700px", border: "none"}}
-                  title="Termin buchen"
-                ></iframe>
+            <div className="w-full h-full p-4 overflow-scroll" id="my-cal-inline-30min">
+              <iframe 
+                src="https://app.cal.eu/na4mc/30min?embed=true&layout=month_view" 
+                style={{width: "100%", height: "100%", minHeight: "700px", border: "none"}}
+                title="Termin buchen"
+              ></iframe>
             </div>
         </div>
       </section>
