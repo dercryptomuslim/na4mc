@@ -100,7 +100,7 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Link href="/termin" className="w-full">
+              <Link href="/bewerbung" className="w-full">
                 <Button 
                   className={`w-full rounded-full h-12 font-bold transition-all ${
                     pkg.highlight 

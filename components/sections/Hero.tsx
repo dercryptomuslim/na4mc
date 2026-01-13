@@ -32,7 +32,7 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Link href="/termin">
+            <Link href="/bewerbung">
               <Button size="lg" className="h-14 px-8 text-lg bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-full w-full sm:w-auto shadow-xl shadow-slate-900/10 transition-all hover:scale-105">
                 Jetzt Potenzialanalyse anfragen
                 <ArrowRight className="ml-2 w-5 h-5" />

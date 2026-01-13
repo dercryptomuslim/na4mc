@@ -53,13 +53,13 @@ export default function BookingPage() {
       <Navbar />
       <section className="pt-32 pb-20">
         <div className="container px-4 mx-auto text-center mb-12">
-          <span className="text-orange-600 font-bold tracking-wider uppercase text-sm mb-4 block">Erstgespräch</span>
+          <span className="text-orange-600 font-bold tracking-wider uppercase text-sm mb-4 block">Wachstums-Audit</span>
           <h1 className="text-4xl font-bold text-slate-900 mb-4">
             Lass uns dein Potenzial analysieren.
           </h1>
           <p className="text-slate-600 max-w-2xl mx-auto">
-            Wähle einen passenden Termin für unser unverbindliches Strategie-Gespräch. 
-            Wir schauen uns deine aktuelle Situation an und prüfen, ob und wie wir dir helfen können.
+            Wir arbeiten nur mit Brands, die bereit sind zu investieren und zu skalieren.
+            Buche jetzt dein kostenloses Audit.
           </p>
         </div>
         

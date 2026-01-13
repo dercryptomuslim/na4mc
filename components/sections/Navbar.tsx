@@ -25,7 +25,7 @@ export function Navbar() {
           <Link href="#leistungen" className="text-sm font-semibold text-slate-600 hover:text-orange-600 transition-colors">Leistungen</Link>
           <Link href="#ablauf" className="text-sm font-semibold text-slate-600 hover:text-orange-600 transition-colors">Ablauf</Link>
           <Link href="#ergebnisse" className="text-sm font-semibold text-slate-600 hover:text-orange-600 transition-colors">Ergebnisse</Link>
-          <Link href="/termin">
+          <Link href="/bewerbung">
             <Button className="bg-slate-900 text-white hover:bg-orange-600 hover:text-white rounded-full px-6 font-semibold transition-all shadow-lg shadow-slate-900/10 hover:shadow-orange-600/20">
               Potenzialanalyse
             </Button>
