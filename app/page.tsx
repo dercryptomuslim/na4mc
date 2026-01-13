@@ -1,14 +1,15 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
+import { Benefits } from "@/components/sections/Benefits";
 import { BentoServices } from "@/components/sections/BentoServices";
+import { Comparison } from "@/components/sections/Comparison";
+import { SuccessStory } from "@/components/sections/SuccessStory";
+import { Pricing } from "@/components/sections/Pricing";
+import { Channels } from "@/components/sections/Channels";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Footer } from "@/components/sections/Footer";
 import { TrustedBy } from "@/components/sections/TrustedBy";
-import { Comparison } from "@/components/sections/Comparison";
-import { SuccessStory } from "@/components/sections/SuccessStory";
-import { Benefits } from "@/components/sections/Benefits";
-import { Channels } from "@/components/sections/Channels";
-import { ProcessSteps } from "@/components/sections/ProcessSteps";
 
 export default function Home() {
   return (
@@ -20,6 +21,7 @@ export default function Home() {
       <BentoServices />
       <Comparison />
       <SuccessStory />
+      <Pricing />
       <Channels />
       <ProcessSteps />
       <Testimonials />
