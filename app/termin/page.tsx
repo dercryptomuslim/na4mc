@@ -3,19 +3,49 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Footer } from "@/components/sections/Footer";
 import { useEffect } from "react";
-import { getCalApi } from "@calcom/embed-react";
 
 export default function BookingPage() {
   useEffect(() => {
-    (async function () {
-      const cal = await getCalApi({"embedJsUrl":"https://app.cal.eu/embed/embed.js"});
-      cal("ui", {
-        theme: "light",
-        styles: { branding: { brandColor: "#ea580c" } },
-        hideEventTypeDetails: false,
-        layout: "month_view",
-      });
-    })();
+    // Cal.com Embed Script
+    (function (C: any, A: string, L: string) { 
+      let p = function (a: any, ar: any) { a.q.push(ar); }; 
+      let d = C.document; 
+      C.Cal = C.Cal || function () { 
+        let cal = C.Cal; 
+        let ar = arguments; 
+        if (!cal.loaded) { 
+          cal.ns = {}; 
+          cal.q = cal.q || []; 
+          d.head.appendChild(d.createElement("script")).src = A; 
+          cal.loaded = true; 
+        } 
+        if (ar[0] === L) { 
+          const api = function () { p(api, arguments); }; 
+          const namespace = ar[1]; 
+          api.q = api.q || []; 
+          if(typeof namespace === "string"){
+            cal.ns[namespace] = cal.ns[namespace] || api;
+            p(cal.ns[namespace], ar);
+            p(cal, ["initNamespace", namespace]);
+          } else p(cal, ar); 
+          return;
+        } 
+        p(cal, ar); 
+      }; 
+    })(window, "https://app.cal.eu/embed/embed.js", "init");
+
+    // Initialize Cal
+    (window as any).Cal?.("init", "30min", {origin:"https://app.cal.eu"});
+
+    // Configure Cal
+    (window as any).Cal?.ns?.["30min"]?.("inline", {
+      elementOrSelector: "#my-cal-inline-30min",
+      config: { "layout": "month_view" },
+      calLink: "na4mc/30min",
+    });
+
+    (window as any).Cal?.ns?.["30min"]?.("ui", { "hideEventTypeDetails": false, "layout": "month_view" });
+
   }, []);
 
   return (
@@ -34,14 +64,11 @@ export default function BookingPage() {
         </div>
         
         <div className="container px-4 mx-auto max-w-5xl bg-white rounded-3xl shadow-xl border border-slate-100 overflow-hidden h-[700px]">
-            {/* Cal.com Inline Embed */}
-            <div className="w-full h-full p-4 overflow-scroll" id="my-cal-inline-30min">
-              <iframe 
-                src="https://app.cal.eu/na4mc/30min?embed=true&layout=month_view" 
-                style={{width: "100%", height: "100%", minHeight: "700px", border: "none"}}
-                title="Termin buchen"
-              ></iframe>
-            </div>
+            {/* Cal.com Inline Embed Container */}
+            <div 
+              style={{width:"100%", height:"100%", overflow:"scroll"}} 
+              id="my-cal-inline-30min"
+            ></div>
         </div>
       </section>
       <Footer />
