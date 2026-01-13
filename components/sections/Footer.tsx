@@ -1,4 +1,5 @@
-import { Mail, Calendar } from "lucide-react";
+import { Mail, Calendar, Instagram, Linkedin, Music2 } from "lucide-react";
+import Link from "next/link";
 
 export function Footer() {
   return (
@@ -12,10 +13,33 @@ export function Footer() {
               Social Media, KI & Prozesse – für messbare Ergebnisse.
             </p>
             <div className="flex gap-4">
-              {/* Social Icons Placeholder */}
-              <div className="w-10 h-10 bg-background rounded-full flex items-center justify-center border border-border">IG</div>
-              <div className="w-10 h-10 bg-background rounded-full flex items-center justify-center border border-border">TK</div>
-              <div className="w-10 h-10 bg-background rounded-full flex items-center justify-center border border-border">LI</div>
+              <Link 
+                href="https://www.instagram.com/dercryptomuslim" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-background rounded-full flex items-center justify-center border border-border hover:bg-orange-50 hover:border-orange-200 hover:text-orange-600 transition-colors"
+                aria-label="Instagram"
+              >
+                <Instagram className="w-5 h-5" />
+              </Link>
+              <Link 
+                href="https://www.tiktok.com/@dercryptomuslim" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-background rounded-full flex items-center justify-center border border-border hover:bg-orange-50 hover:border-orange-200 hover:text-orange-600 transition-colors"
+                aria-label="TikTok"
+              >
+                <Music2 className="w-5 h-5" />
+              </Link>
+              <Link 
+                href="https://www.linkedin.com/in/mustafa-ali-10b83a182" 
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-10 h-10 bg-background rounded-full flex items-center justify-center border border-border hover:bg-orange-50 hover:border-orange-200 hover:text-orange-600 transition-colors"
+                aria-label="LinkedIn"
+              >
+                <Linkedin className="w-5 h-5" />
+              </Link>
             </div>
           </div>
           
@@ -51,4 +75,3 @@ export function Footer() {
     </footer>
   );
 }
-
