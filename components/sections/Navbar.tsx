@@ -5,16 +5,18 @@ import { Menu } from "lucide-react";
 
 export function Navbar() {
   return (
-    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 h-20 flex items-center shadow-sm">
+    <nav className="fixed top-0 left-0 right-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-100 h-24 flex items-center shadow-sm transition-all duration-300">
       <div className="container px-4 mx-auto flex justify-between items-center">
-        <Link href="/" className="flex items-center gap-3 cursor-pointer group">
-          <div className="relative w-32 h-10">
+        <Link href="/" className="flex items-center gap-3 cursor-pointer group py-2">
+          {/* Logo deutlich vergrößert für bessere Sichtbarkeit */}
+          <div className="relative w-64 h-16 md:w-80 md:h-20 transition-transform duration-300 group-hover:scale-105">
             <Image 
               src="/logos/na4mc-logo.png" 
               alt="NA4MC Agentur" 
               fill
               className="object-contain object-left"
               priority
+              sizes="(max-width: 768px) 256px, 320px"
             />
           </div>
         </Link>
@@ -29,7 +31,7 @@ export function Navbar() {
         </div>
 
         <button className="md:hidden text-slate-900">
-          <Menu className="h-6 w-6" />
+          <Menu className="h-8 w-8" />
         </button>
       </div>
     </nav>
