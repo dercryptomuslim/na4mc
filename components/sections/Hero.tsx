@@ -55,8 +55,8 @@ export function Hero() {
             <div className="flex items-start gap-3">
               <CheckCircle2 className="w-5 h-5 text-orange-500 mt-1 flex-shrink-0" />
               <div>
-                <span className="font-bold block text-slate-900">Echte Ergebnisse</span>
-                <span className="text-sm text-slate-500">Seit 2023 hunderten Unternehmen geholfen.</span>
+                <span className="font-bold block text-slate-900">Zeitgeist & Relevanz</span>
+                <span className="text-sm text-slate-500">Wir verstehen Trends, bevor sie Mainstream sind.</span>
               </div>
             </div>
           </div>
