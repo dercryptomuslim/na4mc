@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, TrendingUp } from "lucide-react";
 import { RotatingHalo } from "@/components/ui/RotatingHalo";
+import Link from "next/link";
 
 export function Hero() {
   return (
@@ -31,10 +32,12 @@ export function Hero() {
           </p>
           
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4 mb-16">
-            <Button size="lg" className="h-14 px-8 text-lg bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-full w-full sm:w-auto shadow-xl shadow-slate-900/10 transition-all hover:scale-105">
-              Jetzt Potenzialanalyse anfragen
-              <ArrowRight className="ml-2 w-5 h-5" />
-            </Button>
+            <Link href="/termin">
+              <Button size="lg" className="h-14 px-8 text-lg bg-slate-900 hover:bg-slate-800 text-white font-medium rounded-full w-full sm:w-auto shadow-xl shadow-slate-900/10 transition-all hover:scale-105">
+                Jetzt Potenzialanalyse anfragen
+                <ArrowRight className="ml-2 w-5 h-5" />
+              </Button>
+            </Link>
           </div>
 
           <div className="grid md:grid-cols-3 gap-6 text-left max-w-4xl mx-auto bg-slate-50/50 p-6 rounded-2xl border border-slate-100">

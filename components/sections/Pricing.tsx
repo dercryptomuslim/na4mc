@@ -1,5 +1,6 @@
 import { Check, ArrowRight } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const packages = [
   {
@@ -99,22 +100,24 @@ export function Pricing() {
                 ))}
               </ul>
 
-              <Button 
-                className={`w-full rounded-full h-12 font-bold transition-all ${
-                  pkg.highlight 
-                    ? "bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/20" 
-                    : "bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-900"
-                }`}
-              >
-                {pkg.cta} <ArrowRight className="w-4 h-4 ml-2" />
-              </Button>
+              <Link href="/termin" className="w-full">
+                <Button 
+                  className={`w-full rounded-full h-12 font-bold transition-all ${
+                    pkg.highlight 
+                      ? "bg-orange-500 hover:bg-orange-600 text-white shadow-lg shadow-orange-500/20" 
+                      : "bg-slate-100 hover:bg-slate-900 hover:text-white text-slate-900"
+                  }`}
+                >
+                  {pkg.cta} <ArrowRight className="w-4 h-4 ml-2" />
+                </Button>
+              </Link>
             </div>
           ))}
         </div>
         
         <div className="mt-12 text-center">
             <p className="text-sm text-slate-500">
-                Nicht sicher, was du brauchst? <span className="text-orange-600 font-bold cursor-pointer underline decoration-orange-200 underline-offset-4">Lass uns sprechen.</span>
+                Nicht sicher, was du brauchst? <Link href="/termin"><span className="text-orange-600 font-bold cursor-pointer underline decoration-orange-200 underline-offset-4">Lass uns sprechen.</span></Link>
             </p>
         </div>
       </div>
