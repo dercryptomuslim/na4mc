@@ -9,6 +9,7 @@ export function TrustedBy() {
         </p>
         <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
            
+           {/* 1. UmrahCheck */}
            <div className="relative h-12 w-32 md:w-40 transition-transform hover:scale-105">
              <Image 
                src="/logos/umrahcheck.png" 
@@ -18,6 +19,7 @@ export function TrustedBy() {
              />
            </div>
 
+           {/* 2. DEEN Akademie */}
            <div className="relative h-16 w-32 md:w-40 transition-transform hover:scale-105">
              <Image 
                src="/logos/deen-akademie.png" 
@@ -27,6 +29,17 @@ export function TrustedBy() {
              />
            </div>
 
+           {/* 3. QSK Methode */}
+           <div className="relative h-12 w-28 md:w-32 transition-transform hover:scale-105">
+             <Image 
+               src="/logos/qsk.png" 
+               alt="QSK Methode" 
+               fill
+               className="object-contain"
+             />
+           </div>
+
+           {/* 4. Madinah Cosmetics */}
            <div className="relative h-14 w-32 md:w-40 transition-transform hover:scale-105">
              <Image 
                src="/logos/madinahcosmetics.png" 
@@ -36,19 +49,11 @@ export function TrustedBy() {
              />
            </div>
 
+           {/* 5. Loubaan */}
            <div className="relative h-12 w-32 md:w-40 transition-transform hover:scale-105">
              <Image 
                src="/logos/loubaan.png" 
                alt="Loubaan" 
-               fill
-               className="object-contain"
-             />
-           </div>
-
-           <div className="relative h-12 w-28 md:w-32 transition-transform hover:scale-105">
-             <Image 
-               src="/logos/qsk.png" 
-               alt="QSK" 
                fill
                className="object-contain"
              />
