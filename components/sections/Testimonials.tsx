@@ -5,23 +5,23 @@ export function Testimonials() {
   return (
     <section className="py-24 bg-white">
       <div className="container px-4 mx-auto">
-        <h2 className="text-3xl font-bold text-center mb-16 text-slate-950">Was unsere Partner sagen</h2>
+        <h2 className="text-3xl font-bold text-center mb-16 text-slate-950">Was unsere Kunden sagen</h2>
         <div className="grid md:grid-cols-3 gap-8">
             {[
                 {
-                    quote: "NA4MC hat unser Branding komplett verstanden. Endlich eine Agentur, die unsere Werte teilt und nicht versucht, uns etwas aufzuschwatzen.",
+                    quote: "Endlich eine Agentur, die unsere Werte versteht. Klarer Plan, saubere Umsetzung und ehrliche Beratung.",
                     name: "Zaid E.",
-                    role: "E-Commerce Founder"
+                    role: "E-Commerce Gründer"
                 },
                 {
-                    quote: "Die Lead-Automation ist ein Gamechanger. Wir generieren Leads im Schlaf, und die Qualität ist top.",
+                    quote: "Wir haben endlich Struktur im Marketing. Die Anfragen kommen regelmäßig – und wir wissen, warum.",
                     name: "Ahmed K.",
-                    role: "App Developer"
+                    role: "App-Entwickler"
                 },
                 {
-                    quote: "Professionell, schnell und vor allem: Ehrlich. Das ist im Marketing selten geworden.",
+                    quote: "Professionell, schnell und vor allem: ehrlich. Genau so wünscht man sich Zusammenarbeit.",
                     name: "Sara M.",
-                    role: "Business Coach"
+                    role: "Unternehmerin"
                 }
             ].map((t, i) => (
                 <Card key={i} className="bg-stone-50 border-stone-100">

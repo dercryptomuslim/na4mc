@@ -4,21 +4,21 @@ import { Button } from "@/components/ui/button";
 const services = [
   {
     icon: MonitorSmartphone,
-    title: "Social Media Management",
+    title: "Social Media Betreuung",
     desc: "Wir sorgen dafür, dass dein Unternehmen sichtbar wird. Mit Inhalten, die deine Zielgruppe wirklich erreichen.",
     colSpan: "md:col-span-1",
     bg: "bg-white border-slate-100"
   },
   {
     icon: BarChart3,
-    title: "Social Media Advertising",
+    title: "Werbeanzeigen (Meta, TikTok, Google)",
     desc: "Bezahlte Werbung auf Google, Facebook, Instagram & TikTok. Von der Idee bis zur technischen Umsetzung.",
     colSpan: "md:col-span-1",
     bg: "bg-white border-slate-100"
   },
   {
     icon: Users,
-    title: "Social Recruiting",
+    title: "Mitarbeitergewinnung",
     desc: "Finde die besten Mitarbeiter über soziale Netzwerke. Schnell, effizient und zielgerichtet.",
     colSpan: "md:col-span-1",
     bg: "bg-white border-slate-100"
@@ -41,7 +41,7 @@ const services = [
 
 export function BentoServices() {
   return (
-    <section id="services" className="py-32 bg-slate-50 relative overflow-hidden">
+    <section id="leistungen" className="py-32 bg-slate-50 relative overflow-hidden">
       <div className="container px-4 mx-auto relative z-10">
         
         <div className="text-center max-w-3xl mx-auto mb-16">
@@ -52,7 +52,7 @@ export function BentoServices() {
           </h2>
           <p className="text-slate-600 text-lg">
             Wir betreuen nicht nur Kanäle, sondern optimieren dein Geschäft.
-            Von Konzept, Scripting, Video/Bild bis zur technischen Umsetzung und KPI-Auswertung.
+            Von Konzept und Skript über Video/Bild bis zur technischen Umsetzung und KPI-Auswertung.
           </p>
         </div>
 

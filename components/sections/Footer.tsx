@@ -1,5 +1,4 @@
-import { Button } from "@/components/ui/button";
-import { Mail, Phone, Calendar } from "lucide-react";
+import { Mail, Calendar } from "lucide-react";
 
 export function Footer() {
   return (
@@ -10,7 +9,7 @@ export function Footer() {
             <h3 className="text-2xl font-bold text-primary mb-6">NA4MC</h3>
             <p className="text-muted-foreground max-w-sm mb-6">
               Nomad Agency for Marketing & Consulting LLC.<br/>
-              Deine Partner für halal Growth, Content & Automation.
+              Social Media, KI & Prozesse – für messbare Ergebnisse.
             </p>
             <div className="flex gap-4">
               {/* Social Icons Placeholder */}
@@ -21,13 +20,13 @@ export function Footer() {
           </div>
           
           <div>
-            <h4 className="font-bold mb-6">Services</h4>
+            <h4 className="font-bold mb-6">Leistungen</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li>Social Media Growth</li>
-              <li>Performance Ads</li>
-              <li>Automation & AI</li>
-              <li>Consulting & Setup</li>
-              <li>Influencer Marketing</li>
+              <li>Social Media Betreuung</li>
+              <li>Werbeanzeigen</li>
+              <li>Prozesse & Automatisierung</li>
+              <li>KPI-Auswertung</li>
+              <li>Content-Produktion</li>
             </ul>
           </div>
           
@@ -35,14 +34,13 @@ export function Footer() {
             <h4 className="font-bold mb-6">Kontakt</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
               <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> hello@na4mc.de</li>
-              <li className="flex items-center gap-2"><Phone className="w-4 h-4" /> +1 (555) 123-4567</li>
               <li className="flex items-center gap-2"><Calendar className="w-4 h-4" /> Termin buchen</li>
             </ul>
           </div>
         </div>
         
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
-          <p>&copy; {new Date().getFullYear()} Nomad Agency for Marketing & Consulting LLC. All rights reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Nomad Agency for Marketing & Consulting LLC. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
             <span>Impressum</span>
             <span>Datenschutz</span>

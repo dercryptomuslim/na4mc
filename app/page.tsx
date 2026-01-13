@@ -1,17 +1,14 @@
 import { Navbar } from "@/components/sections/Navbar";
 import { Hero } from "@/components/sections/Hero";
-import { Marquee } from "@/components/ui/marquee";
-import { About } from "@/components/sections/About";
 import { BentoServices } from "@/components/sections/BentoServices";
-import { Stats } from "@/components/sections/Stats";
-import { MarketingExplainer } from "@/components/sections/MarketingExplainer";
-import { Automation } from "@/components/sections/Automation";
-import { Consulting } from "@/components/sections/Consulting";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Footer } from "@/components/sections/Footer";
 import { TrustedBy } from "@/components/sections/TrustedBy";
 import { Comparison } from "@/components/sections/Comparison";
 import { SuccessStory } from "@/components/sections/SuccessStory";
+import { Benefits } from "@/components/sections/Benefits";
+import { Channels } from "@/components/sections/Channels";
+import { ProcessSteps } from "@/components/sections/ProcessSteps";
 
 export default function Home() {
   return (
@@ -19,15 +16,12 @@ export default function Home() {
       <Navbar />
       <Hero />
       <TrustedBy />
-      <Marquee />
+      <Benefits />
       <BentoServices />
       <Comparison />
       <SuccessStory />
-      <Stats />
-      <About />
-      <MarketingExplainer />
-      <Automation />
-      <Consulting />
+      <Channels />
+      <ProcessSteps />
       <Testimonials />
       <Footer />
     </main>
