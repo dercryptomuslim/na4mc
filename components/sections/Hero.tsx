@@ -1,12 +1,12 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight, CheckCircle2, TrendingUp } from "lucide-react";
+import { RotatingHalo } from "@/components/ui/RotatingHalo";
 
 export function Hero() {
   return (
     <section className="relative min-h-screen flex items-center pt-20 overflow-hidden bg-white">
       <div className="absolute inset-0 w-full h-full overflow-hidden pointer-events-none">
-          <div className="hero-glow top-0 -left-4 w-[600px] h-[600px] bg-orange-100/80 animate-blob"></div>
-          <div className="hero-glow top-0 -right-4 w-[500px] h-[500px] bg-blue-100/80 animate-blob animation-delay-2000"></div>
+          <RotatingHalo />
       </div>
 
       <div className="container relative mx-auto px-4 z-10">

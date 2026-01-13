@@ -60,3 +60,91 @@
     @apply absolute -z-10 rounded-full blur-[100px] opacity-40;
   }
 }
+
+@layer utilities {
+  .na4mc-rotating-ring {
+    width: 560px;
+    height: 560px;
+    border-radius: 9999px;
+    background: conic-gradient(
+      from 180deg,
+      rgba(249, 115, 22, 0.65),
+      rgba(59, 130, 246, 0.35),
+      rgba(16, 185, 129, 0.25),
+      rgba(249, 115, 22, 0.65)
+    );
+    opacity: 0.55;
+    filter: blur(0px);
+    -webkit-mask-image: radial-gradient(
+      transparent 55%,
+      #000 56%,
+      #000 72%,
+      transparent 73%
+    );
+    mask-image: radial-gradient(
+      transparent 55%,
+      #000 56%,
+      #000 72%,
+      transparent 73%
+    );
+  }
+
+  .na4mc-rotate-slow {
+    animation: na4mc-rotate 18s linear infinite;
+  }
+
+  .na4mc-float-slow {
+    animation: na4mc-float 9s ease-in-out infinite;
+  }
+}
+
+@keyframes na4mc-rotate {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes na4mc-float {
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+@keyframes blob {
+  0% {
+    transform: translate(0px, 0px) scale(1);
+  }
+  33% {
+    transform: translate(20px, -30px) scale(1.05);
+  }
+  66% {
+    transform: translate(-20px, 20px) scale(0.95);
+  }
+  100% {
+    transform: translate(0px, 0px) scale(1);
+  }
+}
+
+.animate-blob {
+  animation: blob 10s infinite;
+}
+
+.animation-delay-2000 {
+  animation-delay: 2s;
+}
+
+.animation-delay-4000 {
+  animation-delay: 4s;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .na4mc-rotate-slow,
+  .na4mc-float-slow,
+  .animate-blob {
+    animation: none !important;
+  }
+}
