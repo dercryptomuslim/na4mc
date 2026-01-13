@@ -10,6 +10,8 @@ import { Consulting } from "@/components/sections/Consulting";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { Footer } from "@/components/sections/Footer";
 import { TrustedBy } from "@/components/sections/TrustedBy";
+import { Comparison } from "@/components/sections/Comparison";
+import { SuccessStory } from "@/components/sections/SuccessStory";
 
 export default function Home() {
   return (
@@ -19,6 +21,8 @@ export default function Home() {
       <TrustedBy />
       <Marquee />
       <BentoServices />
+      <Comparison />
+      <SuccessStory />
       <Stats />
       <About />
       <MarketingExplainer />
