@@ -2,32 +2,82 @@ import Image from "next/image";
 
 export function TrustedBy() {
   return (
-    <section className="py-12 bg-slate-950 border-b border-white/5 relative z-10">
+    <section className="py-16 bg-white border-y border-slate-100 relative z-10">
       <div className="container px-4 mx-auto text-center">
-        <p className="text-sm font-semibold text-slate-500 mb-8 tracking-wide uppercase">
-          Vertraut von führenden muslimischen Brands
+        <p className="text-sm font-bold text-slate-400 mb-10 tracking-widest uppercase">
+          Vertraut von führenden Brands
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 opacity-50 grayscale hover:grayscale-0 transition-all duration-500">
+        <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
            
-           {/* UmrahCheck - Invertiert für Dark Mode via CSS Filter falls nötig, oder white logo nutzen. 
-               Hier nutzen wir brightness-0 invert um es weiß zu machen */}
-           <div className="relative h-12 w-40 filter brightness-0 invert hover:brightness-100 hover:invert-0 transition-all duration-300">
+           {/* UmrahCheck */}
+           <div className="relative h-12 w-32 md:w-40 transition-transform hover:scale-105">
              <Image 
                src="/logos/umrahcheck.png" 
-               alt="UmrahCheck Logo" 
+               alt="UmrahCheck" 
                fill
                className="object-contain"
              />
            </div>
 
-           {/* QSK Placeholder - Dark Mode */}
-           <div className="flex items-center justify-center h-12 px-4 border border-white/10 rounded text-slate-400 font-bold text-xl hover:text-white hover:border-white/30 transition-all cursor-default">
-             QSK
+           {/* DEEN Akademie */}
+           <div className="relative h-16 w-32 md:w-40 transition-transform hover:scale-105">
+             <Image 
+               src="/logos/deen-akademie.png" 
+               alt="DEEN Akademie" 
+               fill
+               className="object-contain"
+             />
            </div>
 
-           {/* Weitere Platzhalter */}
-           <div className="h-2 w-2 bg-slate-700 rounded-full"></div>
-           <div className="h-2 w-2 bg-slate-700 rounded-full"></div>
+           {/* Madinah Cosmetics */}
+           <div className="relative h-14 w-32 md:w-40 transition-transform hover:scale-105">
+             <Image 
+               src="/logos/madinahcosmetics.png" 
+               alt="Madinah Cosmetics" 
+               fill
+               className="object-contain"
+             />
+           </div>
+
+           {/* Loubaan */}
+           <div className="relative h-12 w-32 md:w-40 transition-transform hover:scale-105">
+             <Image 
+               src="/logos/loubaan.png" 
+               alt="Loubaan" 
+               fill
+               className="object-contain"
+             />
+           </div>
+
+           {/* QSK */}
+           <div className="relative h-12 w-28 md:w-32 transition-transform hover:scale-105">
+             <Image 
+               src="/logos/qsk.png" 
+               alt="QSK" 
+               fill
+               className="object-contain"
+             />
+           </div>
+           
+           {/* L'aveu */}
+           <div className="relative h-12 w-28 md:w-32 transition-transform hover:scale-105 rounded-md overflow-hidden">
+             <Image 
+               src="/logos/laveu.jpg" 
+               alt="L'aveu" 
+               fill
+               className="object-contain"
+             />
+           </div>
+           
+           {/* Bakran */}
+           <div className="relative h-12 w-28 md:w-32 transition-transform hover:scale-105 rounded-md overflow-hidden">
+             <Image 
+               src="/logos/bakran.jpg" 
+               alt="Bakran" 
+               fill
+               className="object-contain"
+             />
+           </div>
 
         </div>
       </div>

@@ -4,36 +4,36 @@
 
 @layer base {
   :root {
-    /* Standard Dark Mode - Kolbe Style */
-    --background: 222 47% 11%; /* Deep Night Blue #0F172A */
-    --foreground: 210 40% 98%; /* Light Grey */
+    /* Modern White Mode - Aura Style */
+    --background: 0 0% 100%; /* Pure White */
+    --foreground: 222 47% 11%; /* Deep Night Blue #0F172A */
 
-    --card: 217 33% 15%; 
-    --card-foreground: 210 40% 98%;
+    --card: 0 0% 100%;
+    --card-foreground: 222 47% 11%;
 
-    --popover: 222 47% 11%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 222 47% 11%;
 
-    --primary: 38 92% 50%; /* Vibrant Amber #F59E0B */
-    --primary-foreground: 222 47% 11%;
+    --primary: 24 95% 53%; /* Vivid Orange #F97316 */
+    --primary-foreground: 0 0% 100%;
 
-    --secondary: 217 33% 20%; 
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 210 40% 96.1%; /* Very Light Slate */
+    --secondary-foreground: 222 47% 11%;
 
-    --muted: 217 33% 20%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215 16% 47%;
 
-    --accent: 32 95% 44%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222 47% 11%;
 
-    --destructive: 0 62.8% 30.6%;
+    --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217 33% 20%;
-    --input: 217 33% 20%;
-    --ring: 38 92% 50%; /* Vibrant Amber ring */
+    --border: 214 32% 91%;
+    --input: 214 32% 91%;
+    --ring: 24 95% 53%;
 
-    --radius: 0.5rem;
+    --radius: 0.75rem;
   }
 }
 
@@ -48,15 +48,15 @@
 
 @layer utilities {
   .glass {
-    @apply bg-white/5 backdrop-blur-md border border-white/10;
+    @apply bg-white/80 backdrop-blur-md border border-slate-200/50 shadow-sm;
   }
   .glass-card {
-    @apply bg-slate-900/50 backdrop-blur-xl border border-white/5 shadow-2xl;
+    @apply bg-white/60 backdrop-blur-xl border border-white/50 shadow-xl shadow-slate-200/50;
   }
   .text-gradient {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-amber-400 via-orange-500 to-amber-600;
+    @apply bg-clip-text text-transparent bg-gradient-to-r from-orange-500 via-amber-500 to-orange-600;
   }
-  .text-gradient-blue {
-    @apply bg-clip-text text-transparent bg-gradient-to-r from-blue-400 to-teal-400;
+  .hero-glow {
+    @apply absolute -z-10 rounded-full blur-[100px] opacity-40;
   }
 }

@@ -13,7 +13,7 @@ import { TrustedBy } from "@/components/sections/TrustedBy";
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-slate-950 text-white selection:bg-amber-500/30">
+    <main className="min-h-screen bg-white text-slate-900 selection:bg-orange-100 selection:text-orange-900">
       <Navbar />
       <Hero />
       <TrustedBy />
