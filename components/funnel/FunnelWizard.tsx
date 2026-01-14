@@ -29,13 +29,11 @@ export function FunnelWizard() {
       // Simulate API call / save to state management here
       // In a real app, you would POST to your API/n8n here
       
-      // For now, redirect via query param to result page
-      // In prod, use a proper store or session
+      // Datenschutz: Keine Antworten in der URL.
       const query = new URLSearchParams({
         result: result || "WACHSTUM",
-        ...newAnswers
       }).toString();
-      
+
       router.push(`/bewerbung/ergebnis?${query}`);
     }
   };

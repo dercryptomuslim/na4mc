@@ -57,8 +57,18 @@ export function Footer() {
           <div>
             <h4 className="font-bold mb-6">Kontakt</h4>
             <ul className="space-y-3 text-sm text-muted-foreground">
-              <li className="flex items-center gap-2"><Mail className="w-4 h-4" /> hello@na4mc.de</li>
-              <li className="flex items-center gap-2"><Calendar className="w-4 h-4" /> Termin buchen</li>
+              <li className="flex items-center gap-2">
+                <Mail className="w-4 h-4" />{" "}
+                <a className="hover:text-orange-600 transition-colors" href="mailto:mustafa.ali@na4mc.de">
+                  mustafa.ali@na4mc.de
+                </a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Calendar className="w-4 h-4" />{" "}
+                <Link className="hover:text-orange-600 transition-colors" href="/bewerbung">
+                  Potenzialanalyse starten
+                </Link>
+              </li>
             </ul>
           </div>
         </div>
@@ -66,9 +76,9 @@ export function Footer() {
         <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-sm text-muted-foreground">
           <p>&copy; {new Date().getFullYear()} Nomad Agency for Marketing & Consulting LLC. Alle Rechte vorbehalten.</p>
           <div className="flex gap-6">
-            <span>Impressum</span>
-            <span>Datenschutz</span>
-            <span>AGB</span>
+            <Link className="hover:text-orange-600 transition-colors" href="/impressum">Impressum</Link>
+            <Link className="hover:text-orange-600 transition-colors" href="/datenschutz">Datenschutz</Link>
+            <Link className="hover:text-orange-600 transition-colors" href="/agb">AGB</Link>
           </div>
         </div>
       </div>
