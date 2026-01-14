@@ -7,7 +7,6 @@ import { SuccessStory } from "@/components/sections/SuccessStory";
 import { Pricing } from "@/components/sections/Pricing";
 import { Channels } from "@/components/sections/Channels";
 import { ProcessSteps } from "@/components/sections/ProcessSteps";
-import { Testimonials } from "@/components/sections/Testimonials";
 import { Footer } from "@/components/sections/Footer";
 import { TrustedBy } from "@/components/sections/TrustedBy";
 
@@ -24,7 +23,6 @@ export default function Home() {
       <Pricing />
       <Channels />
       <ProcessSteps />
-      <Testimonials />
       <Footer />
     </main>
   );
