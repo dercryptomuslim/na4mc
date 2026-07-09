@@ -47,14 +47,16 @@ export default function ImpressumPage() {
               <br />
               Registrierungsstelle: Florida Division of Corporations (Sunbiz)
               <br />
-              Registrierungsnummer: <span className="font-semibold">[bitte ergänzen]</span>
+              Registrierungsnummer (Document No.): <span className="font-semibold">L21000089962</span>
             </p>
 
             <div className="h-px bg-slate-200 my-6" />
 
             <h2 className="text-xl font-bold text-slate-900 mb-4">Umsatzsteuer</h2>
             <p className="text-slate-700 leading-relaxed">
-              USt-IdNr. (falls vorhanden): <span className="font-semibold">[bitte ergänzen]</span>
+              USt-IdNr.: <span className="font-semibold">Nicht vorhanden</span> (US-Gesellschaft ohne
+              deutsche bzw. EU-USt-IdNr.; Umsatzsteuer auf App-Verkäufe wird von Apple als Merchant of
+              Record abgeführt)
             </p>
 
             <div className="h-px bg-slate-200 my-6" />
@@ -93,7 +95,7 @@ export default function ImpressumPage() {
             </p>
 
             <p className="text-xs text-slate-500 mt-8">
-              Hinweis: Dieses Impressum ist eine Vorlage und ersetzt keine Rechtsberatung.
+              Alle Angaben ohne Gewähr.
             </p>
           </div>
         </div>
