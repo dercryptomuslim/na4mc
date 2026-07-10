@@ -11,7 +11,7 @@ export default function DatenschutzPage() {
 
           <div className="space-y-6 text-slate-700 leading-relaxed">
             <p className="text-sm text-slate-500">
-              Stand: {new Date().getFullYear()} (Vorlage)
+              Stand: {new Date().getFullYear()}
             </p>
 
             <div className="bg-slate-50 border border-slate-200 rounded-3xl p-8 space-y-6">
@@ -129,10 +129,12 @@ export default function DatenschutzPage() {
                 </p>
               </section>
 
-              <p className="text-xs text-slate-500">
-                Hinweis: Diese Datenschutzerklärung ist eine Vorlage und ersetzt keine Rechtsberatung. Für
-                eine wirklich „rechtssichere“ Fassung sollten Tracking/Tools/Anbieter und Prozesse final
-                geprüft und ggf. anwaltlich abgestimmt werden.
+              <p className="text-sm text-slate-500">
+                Bei Fragen zum Datenschutz oder zur Ausübung deiner Rechte erreichst du uns jederzeit unter{" "}
+                <a className="text-orange-600 font-semibold" href="mailto:mustafa.ali@na4mc.de">
+                  mustafa.ali@na4mc.de
+                </a>
+                .
               </p>
             </div>
           </div>
