@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Potenzialanalyse – NA4MC</title>
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="stylesheet" href="https://db.onlinewebfonts.com/c/bb5de19d87c09a95216dc6ccd96e37c6?family=Nimbus+Sans+TW01">
+<style>
+*{margin:0;box-sizing:border-box}
+html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
+body{font-family:'Nimbus Sans TW01','Helvetica Neue',Helvetica,Arial,sans-serif;background:#f6f6f4;color:#111827;line-height:1.65}
+header{display:flex;align-items:center;justify-content:space-between;padding:20px clamp(20px,5vw,40px)}
+.brand{display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;font-weight:500;letter-spacing:-.01em}
+.brand svg{width:22px;height:22px}
+main{max-width:42rem;margin:0 auto;padding:32px 20px 80px}
+.progress{width:100%;background:#e5e7eb;height:6px;border-radius:999px;margin-bottom:40px;overflow:hidden}
+.progress div{background:#e8553f;height:100%;border-radius:999px;transition:width .5s cubic-bezier(.22,1,.36,1);width:20%}
+.kicker{color:#e8553f;font-weight:600;text-transform:uppercase;font-size:12px;letter-spacing:.14em;display:block;margin-bottom:14px}
+h2{font-size:clamp(24px,4.5vw,34px);letter-spacing:-.02em;font-weight:600;line-height:1.2;margin-bottom:32px}
+.options{display:grid;gap:14px}
+.option{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 22px;text-align:left;background:#fff;border:1px solid #e5e7eb;border-radius:18px;font:inherit;font-size:16px;color:#374151;cursor:pointer;transition:all .2s}
+.option:hover{border-color:#e8553f;box-shadow:0 10px 30px rgba(0,0,0,.06);color:#111827}
+.option .dot{width:22px;height:22px;border-radius:999px;border:2px solid #e5e7eb;flex-shrink:0;position:relative;transition:border-color .2s}
+.option:hover .dot{border-color:#e8553f}
+.option:hover .dot::after{content:"";position:absolute;inset:4px;border-radius:999px;background:#e8553f}
+.step-anim{animation:fadeUp .5s cubic-bezier(.22,1,.36,1) both}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
+@media (prefers-reduced-motion:reduce){.step-anim{animation:none}.progress div{transition:none}}
+.result{text-align:center}
+.result .badge{display:inline-block;background:#fff;border:1px solid #e5e7eb;color:#e8553f;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:999px;margin-bottom:22px}
+.result h2{margin-bottom:14px}
+.result p.lead{color:#4b5563;font-size:17px;margin-bottom:28px}
+.card{background:#fff;border:1px solid #e5e7eb;border-radius:24px;padding:clamp(24px,4vw,36px);text-align:left;margin-bottom:28px}
+.card ul{list-style:none;display:grid;gap:12px}
+.card li{display:flex;gap:10px;color:#374151;font-size:15px}
+.card li::before{content:"✓";color:#16a34a;font-weight:700}
+.cta{display:inline-block;background:#111827;color:#fff;font-size:15px;font-weight:500;padding:14px 32px;border-radius:999px;text-decoration:none;transition:background .2s}
+.cta:hover{background:#1f2937}
+.secondary{display:inline-block;margin-left:14px;color:#374151;font-size:15px;font-weight:500;padding:14px 28px;border-radius:999px;border:1px solid #d1d5db;text-decoration:none}
+.secondary:hover{background:#fff}
+.privacy{margin-top:36px;font-size:12px;color:#9ca3af;text-align:center}
+footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 24px;padding:20px;font-size:12px;color:#6b7280}
+footer a{color:#6b7280;font-weight:400;text-decoration:none}
+footer a:hover{color:#111827}
+</style>
+</head>
+<body>
+<header>
+  <a class="brand" href="/">
+    <svg viewBox="0 0 256 256" xmlns="http://www.w3.org/2000/svg" fill="currentColor" aria-hidden="true"><path d="M 144 256 L 27.598 256 L 144 139.598 Z M 256 207.5 L 200 256 L 200 56 L 0 56 L 48 0 L 256 0 Z M 0 204.402 L 0 112 L 92.402 112 Z"/></svg>
+    NA4MC
+  </a>
+</header>
+<main>
+  <div class="progress" id="progress-track"><div id="progress-bar"></div></div>
+  <div id="quiz"></div>
+  <p class="privacy">Deine Antworten bleiben in deinem Browser und werden nicht übertragen.</p>
+</main>
+<footer>
+  <span>© 2026 NA4MC LLC</span>
+  <a href="/">Start</a>
+  <a href="/impressum.html">Impressum</a>
+  <a href="/datenschutz.html">Datenschutz</a>
+  <a href="/agb.html">AGB</a>
+</footer>
+<script>
+const QUESTIONS = [
+  {
+    id: "status",
+    question: "Wo steht deine Brand aktuell?",
+    options: ["Ich starte gerade", "Ich habe erste Umsätze", "Ich skaliere bereits", "Ich will Marktführer werden"],
+  },
+  {
+    id: "revenue",
+    question: "Wie hoch ist dein aktueller Monatsumsatz?",
+    options: ["Unter 5.000 €", "5.000 – 20.000 €", "20.000 – 100.000 €", "100.000 €+"],
+  },
+  {
+    id: "budget",
+    question: "Welches monatliche Budget bist du bereit in Wachstum zu investieren?",
+    options: ["Unter 1.000 €", "1.000 – 3.000 €", "3.000 – 10.000 €", "10.000 €+"],
+  },
+  {
+    id: "bottleneck",
+    question: "Was bremst dein Wachstum aktuell am stärksten?",
+    options: ["Zu wenig Leads", "Zu wenig Verkäufe", "Keine Struktur", "Zu wenig Reichweite", "Chaos & fehlende Systeme"],
+  },
+  {
+    id: "commitment",
+    question: "Wenn wir dir zeigen, dass dein Wachstumspotenzial real ist – bist du bereit zu investieren und umzusetzen?",
+    options: ["Ja", "Ich muss überlegen", "Nein"],
+  },
+];
+
+const PACKAGES = {
+  FUNDAMENT: {
+    name: "Fundament",
+    lead: "Für Brands, die professionell starten wollen: Strategie & Setup zuerst.",
+    features: ["Status-Quo Analyse & Audit", "Zielgruppen-Definition (Muslim Persona)", "Tracking-Setup (Pixel, CAPI)", "Content-Strategie & Redaktionsplan", "Basis-Automatisierung"],
+  },
+  WACHSTUM: {
+    name: "Wachstum",
+    lead: "Für Brands, die skalieren wollen: Performance & Ads mit System.",
+    features: ["Alles aus Fundament", "Meta & TikTok Ads Management", "Monatliche Content-Kreation (UGC/Video)", "Aktives Community Management", "KPI-Reporting (2-wöchentlich)"],
+  },
+  DOMINANZ: {
+    name: "Dominanz",
+    lead: "Der QSK-Ansatz: Full-Service von A–Z, Partner & Consulting.",
+    features: ["Alles aus Wachstum", "Ganzheitliche Unternehmensberatung", "Prozess-Optimierung & Skalierung", "Exklusives Netzwerk (Influencer)", "Strategische Jahresplanung"],
+  },
+};
+
+function determinePackage(answers) {
+  if (answers.commitment === "Nein") return "REJECTED";
+
+  let revenueScore = 0;
+  if (answers.revenue === "Unter 5.000 €") revenueScore = 1;
+  else if (answers.revenue === "5.000 – 20.000 €") revenueScore = 2;
+  else if (answers.revenue === "20.000 – 100.000 €") revenueScore = 3;
+  else if (answers.revenue === "100.000 €+") revenueScore = 4;
+
+  let budgetScore = 0;
+  if (answers.budget === "Unter 1.000 €") budgetScore = 1;
+  else if (answers.budget === "1.000 – 3.000 €") budgetScore = 2;
+  else if (answers.budget === "3.000 – 10.000 €") budgetScore = 3;
+  else if (answers.budget === "10.000 €+") budgetScore = 4;
+
+  if (revenueScore === 1 || budgetScore === 1) return "FUNDAMENT";
+  if (revenueScore >= 3 && budgetScore === 4 && answers.commitment === "Ja") return "DOMINANZ";
+  return "WACHSTUM";
+}
+
+const quiz = document.getElementById("quiz");
+const bar = document.getElementById("progress-bar");
+const answers = {};
+let step = 0;
+
+function renderStep() {
+  const q = QUESTIONS[step];
+  bar.style.width = ((step + 1) / QUESTIONS.length) * 100 + "%";
+  quiz.innerHTML = "";
+  const wrap = document.createElement("div");
+  wrap.className = "step-anim";
+  const kicker = document.createElement("span");
+  kicker.className = "kicker";
+  kicker.textContent = "Schritt " + (step + 1) + " von " + QUESTIONS.length;
+  const h = document.createElement("h2");
+  h.textContent = q.question;
+  const opts = document.createElement("div");
+  opts.className = "options";
+  q.options.forEach((option) => {
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "option";
+    const label = document.createElement("span");
+    label.textContent = option;
+    const dot = document.createElement("span");
+    dot.className = "dot";
+    btn.append(label, dot);
+    btn.addEventListener("click", () => {
+      answers[q.id] = option;
+      if (step < QUESTIONS.length - 1) {
+        step++;
+        setTimeout(renderStep, 200);
+      } else {
+        setTimeout(renderResult, 200);
+      }
+    });
+    opts.appendChild(btn);
+  });
+  wrap.append(kicker, h, opts);
+  quiz.appendChild(wrap);
+}
+
+function renderResult() {
+  bar.style.width = "100%";
+  const result = determinePackage(answers);
+  quiz.innerHTML = "";
+  const wrap = document.createElement("div");
+  wrap.className = "result step-anim";
+
+  if (result === "REJECTED") {
+    wrap.innerHTML =
+      '<span class="badge">Danke für deine Ehrlichkeit</span>' +
+      "<h2>Aktuell passt es vermutlich nicht.</h2>" +
+      '<p class="lead">Wachstum braucht die Bereitschaft, zu investieren und umzusetzen. Wenn sich das bei dir ändert, melde dich gerne jederzeit – wir sind dann für dich da.</p>' +
+      '<a class="cta" href="/">Zurück zur Startseite</a>';
+  } else {
+    const pkg = PACKAGES[result];
+    wrap.innerHTML =
+      '<span class="badge">Deine Empfehlung</span>' +
+      "<h2>Level: " + pkg.name + "</h2>" +
+      '<p class="lead">' + pkg.lead + "</p>" +
+      '<div class="card"><ul>' + pkg.features.map((f) => "<li>" + f + "</li>").join("") + "</ul></div>" +
+      '<a class="cta" href="/termin.html">Kostenloses Erstgespräch buchen</a>' +
+      '<a class="secondary" href="/">Zur Startseite</a>';
+  }
+  quiz.appendChild(wrap);
+}
+
+renderStep();
+</script>
+</body>
+</html>
