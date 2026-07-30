@@ -7,6 +7,12 @@ html {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   scroll-behavior: smooth;
+  background-color: #0b1120;
+}
+
+::selection {
+  background-color: rgba(232, 85, 63, 0.35);
+  color: #fff;
 }
 
 @media (prefers-reduced-motion: reduce) {

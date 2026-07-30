@@ -8,19 +8,19 @@ const logos = [
 
 export default function TrustedBy() {
   return (
-    <section className="bg-white border-b border-gray-100 py-12 sm:py-14">
+    <section className="border-b border-white/5 py-12 sm:py-14">
       <div className="max-w-6xl mx-auto px-5 sm:px-8 text-center">
-        <p className="text-[12px] font-medium tracking-[0.18em] uppercase text-gray-400 mb-8 sm:mb-10">
+        <p className="text-[12px] font-medium tracking-[0.18em] uppercase text-white/35 mb-8 sm:mb-10">
           Bekannt aus der Zusammenarbeit mit
         </p>
-        <div className="flex flex-wrap justify-center items-center gap-x-10 gap-y-8 sm:gap-x-16 grayscale opacity-80 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+        <div className="group flex flex-wrap justify-center items-center gap-x-10 gap-y-8 sm:gap-x-16">
           {logos.map((logo) => (
             <img
               key={logo.alt}
               src={logo.src}
               alt={logo.alt}
               loading="lazy"
-              className={`${logo.h} w-auto max-w-[150px] object-contain transition-transform hover:scale-105`}
+              className={`${logo.h} w-auto max-w-[150px] object-contain brightness-0 invert opacity-60 group-hover:brightness-100 group-hover:invert-0 group-hover:opacity-100 transition-all duration-500`}
             />
           ))}
         </div>

@@ -17,7 +17,7 @@ const leistungen = [
 
 export default function Footer() {
   return (
-    <footer className="bg-[#111113] text-white/60 pt-16 sm:pt-20 pb-8">
+    <footer className="border-t border-white/10 text-white/60 pt-16 sm:pt-20 pb-8">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="grid md:grid-cols-4 gap-10 lg:gap-12 mb-14">
           <div className="md:col-span-2">

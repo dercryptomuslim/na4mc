@@ -12,7 +12,7 @@ import Footer from './components/sections/Footer'
 
 export default function App() {
   return (
-    <>
+    <div className="bg-[#0B1120] text-white">
       <Hero />
       <TrustedBy />
       <Benefits />
@@ -24,6 +24,6 @@ export default function App() {
       <Channels />
       <ProcessSteps />
       <Footer />
-    </>
+    </div>
   )
 }

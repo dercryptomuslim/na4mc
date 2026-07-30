@@ -9,40 +9,40 @@
 <style>
 *{margin:0;box-sizing:border-box}
 html{-webkit-font-smoothing:antialiased;-moz-osx-font-smoothing:grayscale}
-body{font-family:'Nimbus Sans TW01','Helvetica Neue',Helvetica,Arial,sans-serif;background:#f6f6f4;color:#111827;line-height:1.65}
+body{font-family:'Nimbus Sans TW01','Helvetica Neue',Helvetica,Arial,sans-serif;background:#0B1120;color:#f1f5f9;line-height:1.65}
 header{display:flex;align-items:center;justify-content:space-between;padding:20px clamp(20px,5vw,40px)}
-.brand{display:flex;align-items:center;gap:8px;color:#111827;text-decoration:none;font-weight:500;letter-spacing:-.01em}
+.brand{display:flex;align-items:center;gap:8px;color:#f1f5f9;text-decoration:none;font-weight:500;letter-spacing:-.01em}
 .brand svg{width:22px;height:22px}
 main{max-width:42rem;margin:0 auto;padding:32px 20px 80px}
-.progress{width:100%;background:#e5e7eb;height:6px;border-radius:999px;margin-bottom:40px;overflow:hidden}
+.progress{width:100%;background:rgba(255,255,255,.12);height:6px;border-radius:999px;margin-bottom:40px;overflow:hidden}
 .progress div{background:#e8553f;height:100%;border-radius:999px;transition:width .5s cubic-bezier(.22,1,.36,1);width:20%}
 .kicker{color:#e8553f;font-weight:600;text-transform:uppercase;font-size:12px;letter-spacing:.14em;display:block;margin-bottom:14px}
 h2{font-size:clamp(24px,4.5vw,34px);letter-spacing:-.02em;font-weight:600;line-height:1.2;margin-bottom:32px}
 .options{display:grid;gap:14px}
-.option{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 22px;text-align:left;background:#fff;border:1px solid #e5e7eb;border-radius:18px;font:inherit;font-size:16px;color:#374151;cursor:pointer;transition:all .2s}
-.option:hover{border-color:#e8553f;box-shadow:0 10px 30px rgba(0,0,0,.06);color:#111827}
-.option .dot{width:22px;height:22px;border-radius:999px;border:2px solid #e5e7eb;flex-shrink:0;position:relative;transition:border-color .2s}
+.option{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 22px;text-align:left;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:18px;font:inherit;font-size:16px;color:#cbd5e1;cursor:pointer;transition:all .2s}
+.option:hover{border-color:#e8553f;box-shadow:0 10px 30px rgba(0,0,0,.06);color:#f1f5f9}
+.option .dot{width:22px;height:22px;border-radius:999px;border:2px solid rgba(255,255,255,.12);flex-shrink:0;position:relative;transition:border-color .2s}
 .option:hover .dot{border-color:#e8553f}
 .option:hover .dot::after{content:"";position:absolute;inset:4px;border-radius:999px;background:#e8553f}
 .step-anim{animation:fadeUp .5s cubic-bezier(.22,1,.36,1) both}
 @keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 @media (prefers-reduced-motion:reduce){.step-anim{animation:none}.progress div{transition:none}}
 .result{text-align:center}
-.result .badge{display:inline-block;background:#fff;border:1px solid #e5e7eb;color:#e8553f;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:999px;margin-bottom:22px}
+.result .badge{display:inline-block;background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);color:#e8553f;font-weight:600;font-size:12px;letter-spacing:.14em;text-transform:uppercase;padding:8px 18px;border-radius:999px;margin-bottom:22px}
 .result h2{margin-bottom:14px}
-.result p.lead{color:#4b5563;font-size:17px;margin-bottom:28px}
-.card{background:#fff;border:1px solid #e5e7eb;border-radius:24px;padding:clamp(24px,4vw,36px);text-align:left;margin-bottom:28px}
+.result p.lead{color:#cbd5e1;font-size:17px;margin-bottom:28px}
+.card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.12);border-radius:24px;padding:clamp(24px,4vw,36px);text-align:left;margin-bottom:28px}
 .card ul{list-style:none;display:grid;gap:12px}
-.card li{display:flex;gap:10px;color:#374151;font-size:15px}
-.card li::before{content:"✓";color:#16a34a;font-weight:700}
-.cta{display:inline-block;background:#111827;color:#fff;font-size:15px;font-weight:500;padding:14px 32px;border-radius:999px;text-decoration:none;transition:background .2s}
-.cta:hover{background:#1f2937}
-.secondary{display:inline-block;margin-left:14px;color:#374151;font-size:15px;font-weight:500;padding:14px 28px;border-radius:999px;border:1px solid #d1d5db;text-decoration:none}
-.secondary:hover{background:#fff}
-.privacy{margin-top:36px;font-size:12px;color:#9ca3af;text-align:center}
-footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 24px;padding:20px;font-size:12px;color:#6b7280}
-footer a{color:#6b7280;font-weight:400;text-decoration:none}
-footer a:hover{color:#111827}
+.card li{display:flex;gap:10px;color:#cbd5e1;font-size:15px}
+.card li::before{content:"✓";color:#4ade80;font-weight:700}
+.cta{display:inline-block;background:#e8553f;color:#fff;font-size:15px;font-weight:500;padding:14px 32px;border-radius:999px;text-decoration:none;transition:background .2s}
+.cta:hover{background:#d64a35}
+.secondary{display:inline-block;margin-left:14px;color:#cbd5e1;font-size:15px;font-weight:500;padding:14px 28px;border-radius:999px;border:1px solid rgba(255,255,255,.3);text-decoration:none}
+.secondary:hover{background:rgba(255,255,255,.04)}
+.privacy{margin-top:36px;font-size:12px;color:#64748b;text-align:center}
+footer{display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:10px 24px;padding:20px;font-size:12px;color:#94a3b8}
+footer a{color:#94a3b8;font-weight:400;text-decoration:none}
+footer a:hover{color:#f1f5f9}
 </style>
 </head>
 <body>
