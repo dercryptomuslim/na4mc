@@ -56,13 +56,32 @@ export default function Hero() {
 
   return (
     <section className="relative min-h-[100svh] overflow-hidden bg-[#0B1120] flex flex-col">
+      {/* Cinematischer "Video"-Hintergrund: Higgsfield-Frames im Crossfade */}
+      <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden="true">
+        <div className="absolute inset-0 animate-bg-zoom">
+          {[1, 2, 3, 4].map((n) => (
+            <img
+              key={n}
+              src={`/bg/frame-${n}.webp`}
+              alt=""
+              draggable={false}
+              decoding="async"
+              className={`absolute inset-0 h-full w-full object-cover bg-frame bg-frame-${n}`}
+            />
+          ))}
+        </div>
+        {/* Kontrast-Overlays für Text-Lesbarkeit */}
+        <div className="absolute inset-0 bg-[#0B1120]/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120]/70 via-transparent to-[#0B1120]" />
+      </div>
+
       {/* Starfield */}
       <div
-        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-80"
+        className="pointer-events-none absolute inset-0 bg-cover bg-center opacity-50"
         style={{ backgroundImage: 'url(/stars.svg)' }}
       />
       {/* Aurora glows */}
-      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[520px] rounded-full bg-[#e8553f]/[0.13] blur-[140px]" />
+      <div className="pointer-events-none absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[520px] rounded-full bg-[#e8553f]/[0.10] blur-[140px]" />
       <div className="pointer-events-none absolute top-1/3 -left-48 w-[520px] h-[420px] rounded-full bg-indigo-500/10 blur-[120px]" />
       <div className="pointer-events-none absolute top-1/4 -right-48 w-[520px] h-[420px] rounded-full bg-[#D4AF37]/[0.07] blur-[120px]" />
 
