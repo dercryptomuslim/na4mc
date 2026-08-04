@@ -1,17 +1,25 @@
-import { CheckCircle2 } from 'lucide-react'
+import { Cpu, LineChart, Megaphone, RefreshCw } from 'lucide-react'
 
 const items = [
   {
-    title: 'Nachhaltige Präsenz auf Social Media',
-    desc: 'Konstant sichtbar – ohne Chaos, ohne Zufall.',
+    icon: Megaphone,
+    title: 'Online Marketing',
+    desc: 'Kampagnen, Content & Ads, die heute funktionieren – nicht gestern.',
   },
   {
-    title: 'Mehr Interaktion & höhere Sichtbarkeit',
-    desc: 'Inhalte, die verstanden werden und Vertrauen aufbauen.',
+    icon: LineChart,
+    title: 'Unternehmensberatung',
+    desc: 'Strategie, Prozesse & Systeme für echtes, messbares Wachstum.',
   },
   {
-    title: 'Leadgenerierung & Umsatzsteigerung',
-    desc: 'Vom Interessenten zum Kunden – mit klaren Prozessen.',
+    icon: RefreshCw,
+    title: 'Neuerfindung',
+    desc: 'Positionierung & Rebranding anhand des Zeitgeistes.',
+  },
+  {
+    icon: Cpu,
+    title: 'KI & Automatisierung',
+    desc: 'Workflows, die skalieren, während du am Geschäft arbeitest.',
   },
 ]
 
@@ -19,19 +27,17 @@ export default function Benefits() {
   return (
     <section className="border-b border-white/5 py-14">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {items.map((item) => (
             <div
               key={item.title}
-              className="rounded-2xl ring-1 ring-white/10 bg-white/[0.03] p-6 hover:bg-white/[0.05] transition-colors"
+              className="rounded-2xl ring-1 ring-white/10 bg-white/[0.03] p-6 hover:bg-white/[0.05] hover:ring-[#e8553f]/30 transition-all"
             >
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-6 h-6 text-[#f0803c] mt-0.5 shrink-0" />
-                <div>
-                  <h3 className="font-medium text-white">{item.title}</h3>
-                  <p className="text-sm text-white/60 mt-1">{item.desc}</p>
-                </div>
+              <div className="w-10 h-10 rounded-xl bg-[#e8553f]/12 ring-1 ring-[#e8553f]/25 flex items-center justify-center mb-4">
+                <item.icon className="w-5 h-5 text-[#f0803c]" />
               </div>
+              <h3 className="font-medium text-white">{item.title}</h3>
+              <p className="text-sm text-white/60 mt-1.5 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

@@ -71,17 +71,24 @@ export default function Hero() {
       <div className="flex-1 min-h-8 sm:min-h-12 lg:min-h-16 shrink-0" />
 
       <div className="relative z-10 flex flex-col items-center text-center px-5">
-        <h1 className="font-normal leading-[1.05] tracking-tight text-[40px] min-[400px]:text-[44px] sm:text-6xl lg:text-7xl xl:text-[80px]">
-          <span className="block animate-fade-up bg-gradient-to-b from-white via-white to-white/50 bg-clip-text text-transparent pb-1">
-            Halal skalieren.
+        <div className="animate-fade-up mb-5 sm:mb-6 flex items-center gap-2.5 rounded-full bg-white/[0.06] ring-1 ring-white/10 backdrop-blur-md pl-1.5 pr-4 py-1.5 text-[12px] sm:text-[13px]">
+          <span className="rounded-full bg-[#e8553f] px-2.5 py-0.5 font-medium text-white shadow-[0_0_14px_rgba(232,85,63,0.5)]">
+            Neu
           </span>
-          <span className="block animate-fade-up [animation-delay:100ms] bg-gradient-to-b from-white via-white to-white/50 bg-clip-text text-transparent pb-2">
-            Mühelos.
+          <span className="text-white/70">NA4MC 2.0 — neu erfunden im Zeitgeist</span>
+        </div>
+
+        <h1 className="font-normal leading-[1.05] tracking-tight text-[40px] min-[400px]:text-[44px] sm:text-6xl lg:text-7xl xl:text-[80px]">
+          <span className="block animate-fade-up [animation-delay:100ms] bg-gradient-to-b from-white via-white to-white/50 bg-clip-text text-transparent pb-1">
+            Neu erfinden.
+          </span>
+          <span className="block animate-fade-up [animation-delay:200ms] bg-gradient-to-b from-white via-white to-white/50 bg-clip-text text-transparent pb-2">
+            Im Zeitgeist.
           </span>
         </h1>
 
         <form
-          className="animate-fade-up [animation-delay:220ms] mt-5 sm:mt-6 w-full max-w-xl"
+          className="animate-fade-up [animation-delay:320ms] mt-5 sm:mt-6 w-full max-w-xl"
           onSubmit={(e) => {
             e.preventDefault()
             submitQuery()
@@ -105,14 +112,14 @@ export default function Hero() {
           </div>
         </form>
 
-        <p className="animate-fade-up [animation-delay:340ms] mt-4 sm:mt-5 text-white/60 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
-          Datengetriebenes Marketing für muslimische Brands
+        <p className="animate-fade-up [animation-delay:440ms] mt-4 sm:mt-5 text-white/60 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
+          Online Marketing &amp; Unternehmensberatung für muslimische Brands
           <br />
-          — Strategie, Content &amp;{' '}
-          <Sparkles className="inline w-4 h-4 -mt-1 text-[#f0803c]" /> ethische Automatisierung
+          — datengetrieben, halal &amp;{' '}
+          <Sparkles className="inline w-4 h-4 -mt-1 text-[#f0803c]" /> am Puls der Zeit
         </p>
 
-        <div className="animate-fade-up [animation-delay:460ms] mt-4 sm:mt-5 flex flex-wrap items-center justify-center gap-3">
+        <div className="animate-fade-up [animation-delay:560ms] mt-4 sm:mt-5 flex flex-wrap items-center justify-center gap-3">
           <a
             href="/termin.html"
             className="bg-[#e8553f] text-white text-sm font-medium px-6 py-2.5 rounded-full shadow-[0_0_28px_rgba(232,85,63,0.4)] hover:brightness-110 hover:shadow-[0_0_36px_rgba(232,85,63,0.55)] transition-all"
@@ -130,7 +137,10 @@ export default function Hero() {
 
       <div className="flex-1 min-h-10 sm:min-h-12 lg:min-h-16 shrink-0" />
 
-      <div className="animate-hero-rise [animation-delay:620ms] relative z-0 w-[92%] sm:w-[84%] lg:w-[72%] max-w-4xl mx-auto shrink-0 -mb-10 sm:-mb-20 lg:-mb-32">
+      <div className="animate-hero-rise [animation-delay:720ms] relative z-0 w-[92%] sm:w-[84%] lg:w-[72%] max-w-4xl mx-auto shrink-0 -mb-10 sm:-mb-20 lg:-mb-32">
+        {/* RedSun-Bogen hinter dem Dashboard */}
+        <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 -top-16 sm:-top-24 w-[420px] sm:w-[600px] h-[210px] sm:h-[300px] rounded-t-full border-2 border-b-0 border-[#f0803c]/50 [mask-image:linear-gradient(to_bottom,black_30%,transparent_85%)]" />
+        <div className="pointer-events-none absolute left-1/2 -translate-x-1/2 -top-10 sm:-top-16 w-[340px] sm:w-[480px] h-[170px] sm:h-[240px] rounded-t-full bg-gradient-to-t from-[#e8553f]/40 via-[#f0803c]/15 to-transparent blur-2xl" />
         <div className="pointer-events-none absolute -inset-x-16 -top-10 h-72 rounded-full bg-[#e8553f]/[0.12] blur-[100px]" />
         <ScaledDashboard>
           <DashboardMockup />
