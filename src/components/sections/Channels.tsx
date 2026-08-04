@@ -31,7 +31,7 @@ export default function Channels() {
           <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-white">
             Die passenden Kanäle. Die passende Botschaft.
           </h2>
-          <p className="text-white/60 mt-4 sm:text-lg leading-relaxed">
+          <p className="text-white/70 mt-4 sm:text-lg leading-relaxed">
             Wir wählen nicht „alle Plattformen". Wir wählen die, die zu deinem Geschäft und deiner
             Zielgruppe passen.
           </p>
@@ -47,7 +47,7 @@ export default function Channels() {
                 <channel.icon className="w-6 h-6 text-[#f0803c]" />
               </div>
               <h3 className="font-medium text-white text-lg">{channel.title}</h3>
-              <p className="text-white/60 text-sm mt-2 leading-relaxed">{channel.desc}</p>
+              <p className="text-white/70 text-sm mt-2 leading-relaxed">{channel.desc}</p>
             </div>
           ))}
         </div>

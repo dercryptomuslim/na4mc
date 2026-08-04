@@ -26,7 +26,7 @@ export default function Comparison() {
           <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-white mb-5">
             Warum Meta Ads oft scheitern
           </h2>
-          <p className="text-white/60 sm:text-lg leading-relaxed">
+          <p className="text-white/70 sm:text-lg leading-relaxed">
             Viele Brands verbrennen Budget ohne echte Ergebnisse. Sie setzen auf Agenturen, die nur
             Knöpfe drücken, statt das Geschäft zu verstehen.
           </p>
@@ -42,7 +42,7 @@ export default function Comparison() {
             </div>
             <ul className="space-y-3.5">
               {classic.map((item) => (
-                <li key={item} className="flex items-start gap-3 text-white/60 text-sm sm:text-[15px]">
+                <li key={item} className="flex items-start gap-3 text-white/70 text-sm sm:text-[15px]">
                   <X className="w-5 h-5 text-red-400/70 mt-0.5 shrink-0" />
                   <span>{item}</span>
                 </li>

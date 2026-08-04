@@ -17,11 +17,11 @@ export default function About() {
           <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-white mb-5 leading-tight">
             Bridging Faith &amp; Business.
           </h2>
-          <p className="text-white/60 sm:text-lg mb-4 leading-relaxed">
+          <p className="text-white/70 sm:text-lg mb-4 leading-relaxed">
             Wir sind nicht nur eine Agentur. Wir sind muslimische Unternehmer, die den Spagat
             zwischen modernen Business-Strategien und unseren Werten verstehen.
           </p>
-          <p className="text-white/60 sm:text-lg mb-8 leading-relaxed">
+          <p className="text-white/70 sm:text-lg mb-8 leading-relaxed">
             Gegründet als US-LLC in Florida, leben wir das digitale Nomadentum vor und bringen
             internationale Best-Practices in den deutschsprachigen, muslimischen Markt.
           </p>
@@ -33,8 +33,8 @@ export default function About() {
                   <ShieldCheck className="w-4 h-4" />
                 </div>
                 <div>
-                  <h4 className="font-medium text-white">{item.title}</h4>
-                  <p className="text-white/60 text-sm">{item.text}</p>
+                  <h3 className="font-medium text-white">{item.title}</h3>
+                  <p className="text-white/70 text-sm">{item.text}</p>
                 </div>
               </div>
             ))}
@@ -50,9 +50,9 @@ export default function About() {
               loading="lazy"
               className="w-full h-[380px] sm:h-[460px] object-cover"
             />
-            <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-[#0B1120]/70 backdrop-blur-md ring-1 ring-white/10 p-5 text-white">
+            <div className="absolute inset-x-4 bottom-4 rounded-2xl bg-[#0B1120]/85 backdrop-blur-md ring-1 ring-white/10 p-5 text-white">
               <p className="text-sm font-medium">Mustafa Ali</p>
-              <p className="text-xs text-white/60 mb-3">Founder NA4MC</p>
+              <p className="text-xs text-white/70 mb-3">Founder NA4MC</p>
               <p className="text-sm sm:text-[15px] leading-relaxed text-white/90 italic">
                 „Unser Ziel ist es, muslimische Unternehmer so stark zu machen, dass sie nicht nur
                 wirtschaftlich, sondern auch gesellschaftlich etwas bewegen können."

@@ -89,7 +89,7 @@ export default function DashboardMockup() {
         <ChevronLeft className="w-3.5 h-3.5 text-white/40" />
         <ChevronRight className="w-3.5 h-3.5 text-white/25" />
         <div className="flex-1 flex justify-center">
-          <div className="flex items-center gap-1.5 bg-[#1a1a1c] rounded-md px-6 py-1 text-[10px] text-white/60">
+          <div className="flex items-center gap-1.5 bg-[#1a1a1c] rounded-md px-6 py-1 text-[10px] text-white/70">
             <Monitor className="w-3 h-3" />
             na4mc.de
           </div>
@@ -120,7 +120,7 @@ export default function DashboardMockup() {
               <div
                 key={item.label}
                 className={`flex items-center gap-2 rounded-md px-2 py-1.5 text-[10px] ${
-                  item.active ? 'bg-white/[0.06] text-white/90' : 'text-white/60'
+                  item.active ? 'bg-white/[0.06] text-white/90' : 'text-white/70'
                 }`}
               >
                 <item.icon className="w-3 h-3" />

@@ -28,12 +28,9 @@ export default function SuccessStory() {
             <h2 className="text-3xl sm:text-4xl lg:text-5xl font-medium tracking-tight text-white mb-5 leading-tight">
               Die QSK Methode:
               <br />
-              <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#e8553f] via-[#f0803c] to-[#D4AF37]">
-                3,5 Mio. € Umsatz
-              </span>{' '}
-              in 4 Jahren.
+              <span className="text-[#f0803c]">3,5 Mio. € Umsatz</span> in 4 Jahren.
             </h2>
-            <p className="text-white/60 sm:text-lg mb-8 leading-relaxed">
+            <p className="text-white/70 sm:text-lg mb-8 leading-relaxed">
               Wir haben einen Koran-Lesekurs im DACH-Raum aus dem Nichts aufgebaut. Mit nur 300.000€
               Ad Spend haben wir über 3,5 Millionen Euro Umsatz generiert.
             </p>
@@ -59,19 +56,19 @@ export default function SuccessStory() {
           </div>
 
           <div className="lg:w-1/2 w-full">
-            <div className="bg-white/[0.04] ring-1 ring-white/10 rounded-3xl p-7 sm:p-8 backdrop-blur-sm shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
+            <div className="bg-[#0e1729] ring-1 ring-white/10 rounded-3xl p-7 sm:p-8 shadow-[0_24px_80px_rgba(0,0,0,0.35)]">
               <h3 className="text-xl sm:text-2xl font-medium tracking-tight text-white mb-6 border-b border-white/10 pb-4">
                 Warum das funktioniert hat
               </h3>
               <ul className="space-y-5">
                 {reasons.map((reason, i) => (
                   <li key={reason.title} className="flex items-start gap-4">
-                    <div className="w-8 h-8 rounded-full bg-[#e8553f]/15 text-[#f0803c] ring-1 ring-[#e8553f]/25 flex items-center justify-center shrink-0 text-sm font-medium">
+                    <div className="w-8 h-8 rounded-full bg-[#e8553f]/25 text-[#ffab8f] ring-1 ring-[#e8553f]/35 flex items-center justify-center shrink-0 text-sm font-medium">
                       {i + 1}
                     </div>
                     <div>
                       <h4 className="font-medium text-white mb-1">{reason.title}</h4>
-                      <p className="text-white/60 text-sm leading-relaxed">{reason.desc}</p>
+                      <p className="text-white/70 text-sm leading-relaxed">{reason.desc}</p>
                     </div>
                   </li>
                 ))}

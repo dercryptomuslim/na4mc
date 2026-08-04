@@ -27,6 +27,7 @@ export default function Benefits() {
   return (
     <section className="border-b border-white/5 py-14">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
+        <h2 className="sr-only">Unsere Fokus-Bereiche</h2>
         <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-5">
           {items.map((item) => (
             <div
@@ -37,7 +38,7 @@ export default function Benefits() {
                 <item.icon className="w-5 h-5 text-[#f0803c]" />
               </div>
               <h3 className="font-medium text-white">{item.title}</h3>
-              <p className="text-sm text-white/60 mt-1.5 leading-relaxed">{item.desc}</p>
+              <p className="text-sm text-white/70 mt-1.5 leading-relaxed">{item.desc}</p>
             </div>
           ))}
         </div>

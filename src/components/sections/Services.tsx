@@ -52,7 +52,7 @@ export default function Services() {
             <br />
             Von A bis Z.
           </h2>
-          <p className="text-white/60 sm:text-lg leading-relaxed">
+          <p className="text-white/70 sm:text-lg leading-relaxed">
             Wir betreuen nicht nur Kanäle, sondern optimieren dein Geschäft. Von Konzept und Skript
             über Video/Bild bis zur technischen Umsetzung und KPI-Auswertung.
           </p>
@@ -68,7 +68,7 @@ export default function Services() {
                 <service.icon className="w-6 h-6 text-[#f0803c]" />
               </div>
               <h3 className="text-lg font-medium text-white mb-2">{service.title}</h3>
-              <p className="text-white/60 text-sm sm:text-[15px] leading-relaxed">{service.desc}</p>
+              <p className="text-white/70 text-sm sm:text-[15px] leading-relaxed">{service.desc}</p>
             </div>
           ))}
         </div>

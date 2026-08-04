@@ -31,7 +31,7 @@ export default function ProcessSteps() {
           <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-white">
             So arbeiten wir zusammen
           </h2>
-          <p className="text-white/60 mt-4 sm:text-lg leading-relaxed">
+          <p className="text-white/70 mt-4 sm:text-lg leading-relaxed">
             Einfach, transparent und mit klaren Schritten – damit du weißt, was als Nächstes
             passiert.
           </p>
@@ -49,7 +49,7 @@ export default function ProcessSteps() {
                 </div>
                 <h3 className="text-lg sm:text-xl font-medium text-white">{step.title}</h3>
               </div>
-              <p className="text-white/60 text-sm sm:text-[15px] leading-relaxed">{step.desc}</p>
+              <p className="text-white/70 text-sm sm:text-[15px] leading-relaxed">{step.desc}</p>
             </div>
           ))}
         </div>

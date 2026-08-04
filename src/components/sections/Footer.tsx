@@ -17,7 +17,7 @@ const leistungen = [
 
 export default function Footer() {
   return (
-    <footer className="border-t border-white/10 text-white/60 pt-16 sm:pt-20 pb-8">
+    <footer className="border-t border-white/10 text-white/70 pt-16 sm:pt-20 pb-8">
       <div className="max-w-6xl mx-auto px-5 sm:px-8">
         <div className="grid md:grid-cols-4 gap-10 lg:gap-12 mb-14">
           <div className="md:col-span-2">
@@ -38,7 +38,7 @@ export default function Footer() {
                   target="_blank"
                   rel="noopener noreferrer"
                   aria-label={social.label}
-                  className="w-10 h-10 rounded-full ring-1 ring-white/15 flex items-center justify-center text-white/60 hover:text-white hover:ring-white/40 transition-colors"
+                  className="w-10 h-10 rounded-full ring-1 ring-white/15 flex items-center justify-center text-white/70 hover:text-white hover:ring-white/40 transition-colors"
                 >
                   <social.icon className="w-[18px] h-[18px]" />
                 </a>
@@ -47,7 +47,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white text-sm font-medium mb-5">Leistungen</h4>
+            <h3 className="text-white text-sm font-medium mb-5">Leistungen</h3>
             <ul className="space-y-2.5 text-sm">
               {leistungen.map((item) => (
                 <li key={item}>{item}</li>
@@ -56,7 +56,7 @@ export default function Footer() {
           </div>
 
           <div>
-            <h4 className="text-white text-sm font-medium mb-5">Kontakt</h4>
+            <h3 className="text-white text-sm font-medium mb-5">Kontakt</h3>
             <ul className="space-y-2.5 text-sm">
               <li>
                 <a

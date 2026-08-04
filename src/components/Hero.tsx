@@ -72,7 +72,7 @@ export default function Hero() {
         </div>
         {/* Kontrast-Overlays für Text-Lesbarkeit */}
         <div className="absolute inset-0 bg-[#0B1120]/40" />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120]/70 via-transparent to-[#0B1120]" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#0B1120]/70 via-[#0B1120]/30 to-[#0B1120]" />
       </div>
 
       {/* Starfield */}
@@ -98,10 +98,10 @@ export default function Hero() {
         </div>
 
         <h1 className="font-normal leading-[1.05] tracking-tight text-[40px] min-[400px]:text-[44px] sm:text-6xl lg:text-7xl xl:text-[80px]">
-          <span className="block animate-fade-up [animation-delay:100ms] bg-gradient-to-b from-white via-white to-white/50 bg-clip-text text-transparent pb-1">
+          <span className="block animate-fade-up [animation-delay:100ms] text-white pb-1 [text-shadow:0_2px_24px_rgba(11,17,32,0.6)]">
             Neu erfinden.
           </span>
-          <span className="block animate-fade-up [animation-delay:200ms] bg-gradient-to-b from-white via-white to-white/50 bg-clip-text text-transparent pb-2">
+          <span className="block animate-fade-up [animation-delay:200ms] text-white pb-2 [text-shadow:0_2px_24px_rgba(11,17,32,0.6)]">
             Im Zeitgeist.
           </span>
         </h1>
@@ -131,7 +131,7 @@ export default function Hero() {
           </div>
         </form>
 
-        <p className="animate-fade-up [animation-delay:440ms] mt-4 sm:mt-5 text-white/60 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md">
+        <p className="animate-fade-up [animation-delay:440ms] mt-4 sm:mt-5 text-white/85 text-sm sm:text-base lg:text-lg leading-relaxed max-w-md [text-shadow:0_1px_12px_rgba(11,17,32,0.8)]">
           Online Marketing &amp; Unternehmensberatung für muslimische Brands
           <br />
           — datengetrieben, halal &amp;{' '}

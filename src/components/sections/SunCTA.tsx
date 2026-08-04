@@ -11,12 +11,12 @@ export default function SunCTA() {
         <span className="block text-[13px] font-medium tracking-[0.14em] uppercase text-[#f0803c] mb-5">
           Der nächste Schritt
         </span>
-        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.08] bg-gradient-to-b from-white via-white to-white/50 bg-clip-text text-transparent mb-6">
+        <h2 className="text-4xl sm:text-5xl lg:text-6xl font-medium tracking-tight leading-[1.08] text-white mb-6">
           Zeit, dich neu
           <br />
           zu erfinden.
         </h2>
-        <p className="text-white/60 sm:text-lg leading-relaxed max-w-xl mx-auto mb-9">
+        <p className="text-white/70 sm:text-lg leading-relaxed max-w-xl mx-auto mb-9">
           Online Marketing, Unternehmensberatung und eine Marke, die im Zeitgeist ankommt — aus
           einer Hand. Lass uns herausfinden, was in deinem Business steckt.
         </p>

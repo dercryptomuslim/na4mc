@@ -23,7 +23,7 @@ function StatCard() {
     <div className="relative rounded-3xl bg-white/[0.04] ring-1 ring-white/10 p-6 sm:p-8 shadow-[0_24px_80px_rgba(0,0,0,0.4)]">
       <div className="pointer-events-none absolute -top-10 left-1/2 -translate-x-1/2 w-72 h-40 rounded-full bg-[#e8553f]/10 blur-3xl" />
       <div className="relative space-y-4">
-        <div className="rounded-2xl bg-[#0B1120]/80 ring-1 ring-white/10 p-5">
+        <div className="rounded-2xl bg-[#0B1120]/80 p-5">
           <div className="flex items-center justify-between mb-1.5">
             <span className="text-[11px] tracking-[0.14em] uppercase text-white/40">
               Reichweite / Monat
@@ -42,7 +42,7 @@ function StatCard() {
             />
           </svg>
         </div>
-        <div className="flex items-center justify-between rounded-2xl bg-[#0B1120]/80 ring-1 ring-white/10 p-5">
+        <div className="flex items-center justify-between rounded-2xl bg-[#0B1120]/80 p-5">
           <div>
             <p className="text-[11px] tracking-[0.14em] uppercase text-white/40 mb-1">
               Ø Ergebnis pro 1 € Ad Spend
@@ -79,7 +79,7 @@ function TaskCard() {
               className={`flex items-center gap-3 rounded-full px-4 py-3 text-sm ${
                 task.active
                   ? 'bg-gradient-to-r from-[#e8553f] to-[#f0803c] text-white shadow-[0_0_28px_rgba(232,85,63,0.35)]'
-                  : 'bg-[#0B1120]/80 ring-1 ring-white/10 text-white/70'
+                  : 'bg-[#0B1120]/80 text-white/70'
               }`}
             >
               <span className={`text-[11px] font-semibold tracking-wider ${task.active ? 'text-white/80' : 'text-white/40'}`}>
@@ -108,7 +108,7 @@ export default function FeatureBlocks() {
             <h3 className="text-3xl sm:text-4xl font-medium tracking-tight text-white mb-5 leading-tight">
               Beratung, die das große Ganze sieht.
             </h3>
-            <p className="text-white/60 sm:text-lg leading-relaxed mb-7">
+            <p className="text-white/70 sm:text-lg leading-relaxed mb-7">
               Wir schauen nicht nur auf Kanäle, sondern auf dein Geschäftsmodell: Angebot,
               Prozesse, Zahlen. Danach ist klar, wo dein Wachstum wirklich entsteht.
             </p>
@@ -139,7 +139,7 @@ export default function FeatureBlocks() {
             <h3 className="text-3xl sm:text-4xl font-medium tracking-tight text-white mb-5 leading-tight">
               Neu erfinden — anhand des Zeitgeistes.
             </h3>
-            <p className="text-white/60 sm:text-lg leading-relaxed mb-7">
+            <p className="text-white/70 sm:text-lg leading-relaxed mb-7">
               Märkte drehen sich schneller als je zuvor. Wir bringen deine Marke dahin, wo deine
               Kunden heute sind – und morgen sein werden. Ohne deine Werte zu verlieren.
             </p>

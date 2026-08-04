@@ -58,7 +58,7 @@ export default function Pricing() {
           <h2 className="text-3xl sm:text-4xl font-medium tracking-tight text-white mb-5">
             Wähle dein Level.
           </h2>
-          <p className="text-white/60 sm:text-lg leading-relaxed">
+          <p className="text-white/70 sm:text-lg leading-relaxed">
             Transparente Modelle für jede Phase deines Wachstums. Vom sauberen Start bis zur
             Marktführerschaft.
           </p>
