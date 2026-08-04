@@ -45,8 +45,8 @@ export default function About() {
           <div className="pointer-events-none absolute -inset-8 rounded-full bg-[#e8553f]/[0.07] blur-[80px]" />
           <div className="relative rounded-3xl overflow-hidden ring-1 ring-white/10 shadow-[0_24px_80px_rgba(0,0,0,0.5)]">
             <img
-              src="/logos/dercryptomuslim.jpg"
-              alt="Mustafa Ali, Founder NA4MC"
+              src="/bg/founder.webp"
+              alt="Gründer mit Blick auf die aufgehende Sonne über den Dünen"
               loading="lazy"
               className="w-full h-[380px] sm:h-[460px] object-cover"
             />
