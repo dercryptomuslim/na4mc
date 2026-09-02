@@ -9,7 +9,7 @@ export const hero = {
 }
 
 export const problem = {
-  label: '01 / Problem',
+  label: '01 — Problem',
   headline: 'Gute Produkte reichen nicht.',
   intro:
     'Viele muslimische Unternehmen haben starke Produkte und echte Werte — aber kein System, das daraus planbares Wachstum macht.',
@@ -55,7 +55,7 @@ export const pillars = [
 ]
 
 export const proof = {
-  label: '04 / Proof',
+  label: '03 — Proof',
   headline: 'Belegt. Nicht behauptet.',
   stats: [
     { value: 3.5, decimals: 1, suffix: ' Mio. €', label: 'Umsatz im QSK-Case generiert' },
@@ -67,7 +67,7 @@ export const proof = {
 }
 
 export const caseQsk = {
-  label: '05 / Case — QSK Methode',
+  label: '04 — Case: QSK Methode',
   headline: ['Von 0 auf', '3,5 Mio. €.'],
   intro:
     'Ein Koran-Lesekurs im DACH-Raum. Kein bestehendes Publikum, kein Funnel, kein System. Vier Jahre später: ein digitales Bildungsunternehmen mit planbarer Akquise.',
@@ -87,7 +87,7 @@ export const caseQsk = {
 }
 
 export const build = {
-  label: '06 / We build',
+  label: '05 — We build',
   headline: ["We don't just advise.", 'We build.'],
   sub: 'Die Systeme, die wir unseren Kunden empfehlen, müssen zuerst bei unseren eigenen Produkten funktionieren.',
   body: 'Zwei eigene Apps im Apple App Store — von uns konzipiert, gebaut, gelauncht und vermarktet. Wer selbst Produkte betreibt, berät anders: mit Haut im Spiel statt Folien.',
@@ -121,7 +121,7 @@ export const serviceGroups = [
 ]
 
 export const why = {
-  label: '08 / Warum wir',
+  label: '07 — Warum wir',
   kicker: 'Bridging Faith & Business.',
   headline: ['Wir verstehen den Markt,', 'weil wir Teil davon sind.'],
   body: 'Muslimische Kunden im DACH-Raum sind kein Nischensegment — sie sind ein Markt mit eigener Sprache, eigenen Einwänden und eigenem Vertrauensaufbau. Wir übersetzen das nicht aus Studien. Wir kennen es, weil wir selbst darin unternehmerisch arbeiten.',
@@ -134,7 +134,7 @@ export const why = {
 }
 
 export const founder = {
-  label: '09 / Founder',
+  label: '08 — Founder',
   headline: 'Founder. Marketer. Builder.',
   name: 'Mustafa Ali',
   roles: ['Unternehmer', 'Marketer', 'Berater', 'Produkt-Builder'],
@@ -144,7 +144,7 @@ export const founder = {
 }
 
 export const process = {
-  label: '10 / Prozess',
+  label: '09 — Prozess',
   headline: 'Vier Schritte. Ein System.',
   steps: [
     { n: '01', title: 'Diagnose', desc: 'Status quo, Zahlen, Zielgruppe, Angebot. Wir finden heraus, wo Wachstum wirklich entsteht — und wo es klemmt.' },
@@ -155,7 +155,7 @@ export const process = {
 }
 
 export const engagement = {
-  label: '11 / Zusammenarbeit',
+  label: '10 — Zusammenarbeit',
   headline: 'Drei Stufen. Ein Ziel.',
   sub: 'Keine Pakete von der Stange — der Einstieg richtet sich nach Phase und Ziel. Umfang und Konditionen klären wir im Gespräch.',
   levels: [

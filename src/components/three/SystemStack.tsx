@@ -63,7 +63,7 @@ export default function SystemStack({
                     isActive ? 'text-accent-soft' : 'text-ink/35'
                   }`}
                 >
-                  {pillar.n} / {pillar.en}
+                  {pillar.en}
                 </span>
                 {i === 0 && (
                   <Logo className="absolute inset-0 m-auto h-[30%] w-[30%] text-accent drop-shadow-[0_0_18px_rgba(232,85,63,0.45)]" />

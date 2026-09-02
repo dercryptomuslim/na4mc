@@ -1,33 +1,27 @@
 import { serviceGroups } from '../../content/home'
-import { MaskedLines, Reveal, useTilt } from '../../lib/motion'
-
-const spans = ['lg:col-span-7', 'lg:col-span-5', 'lg:col-span-5', 'lg:col-span-7']
+import { Reveal, useTilt } from '../../lib/motion'
+import { SectionHeader } from '../ui/Panel'
 
 function GroupCard({ group, index }: { group: (typeof serviceGroups)[number]; index: number }) {
-  const tilt = useTilt(2.5)
+  const tilt = useTilt(2)
 
   return (
-    <Reveal delay={index * 80} className={`rv col-span-12 ${spans[index]}`}>
+    <Reveal delay={index * 70} className="rv">
       <div
         {...tilt}
-        className={`h-full rounded-2xl border p-7 transition-colors duration-500 sm:p-9 ${
-          index === 0
-            ? 'border-accent/30 bg-accent/[0.05]'
-            : 'border-ink/10 bg-ink/[0.02] hover:border-ink/20'
-        }`}
+        className="h-full overflow-hidden rounded-[28px] border border-ink/[0.08] bg-[#10131B] p-7 transition-colors duration-500 hover:border-ink/15 sm:p-9"
         style={tilt.style}
       >
-        <p className="text-[11px] font-semibold uppercase tracking-label text-accent-soft">
-          {group.n} / {group.en}
+        <p className="flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-label text-ink/45">
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+          {group.en}
         </p>
-        <h3 className="mt-3 text-2xl font-medium tracking-[-0.01em] text-ink sm:text-3xl">
-          {group.title}
-        </h3>
+        <h3 className="mt-3 text-2xl font-medium tracking-[-0.01em] text-ink">{group.title}</h3>
         <ul className="mt-6">
           {group.items.map((item) => (
             <li
               key={item}
-              className="flex items-center justify-between border-t border-ink/10 py-3 text-[15px] text-ink/75 last:border-b last:border-ink/10"
+              className="flex items-center justify-between border-t border-ink/[0.07] py-3 text-[15px] text-ink/70"
             >
               {item}
               <span className="text-ink/25" aria-hidden="true">
@@ -43,19 +37,22 @@ function GroupCard({ group, index }: { group: (typeof serviceGroups)[number]; in
 
 export default function ServiceGroups() {
   return (
-    <section id="leistungen" className="relative border-t border-ink/5 py-24 sm:py-36">
+    <section id="leistungen" className="relative py-20 sm:py-28">
       <span id="services" className="absolute -top-20" aria-hidden="true" />
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <Reveal>
-          <p className="rv mb-5 text-[11px] font-semibold uppercase tracking-label text-accent-soft">
-            07 / Leistungen
-          </p>
-        </Reveal>
-        <Reveal as="h2" className="in max-w-3xl text-[clamp(2rem,4.5vw,3.5rem)] font-medium leading-[1.02] tracking-[-0.02em] text-ink">
-          <MaskedLines lines={['Vier Disziplinen.', 'Ein Anspruch: Es muss wirken.']} />
-        </Reveal>
+        <SectionHeader
+          label="06 — Leistungen"
+          title={
+            <>
+              Vier Disziplinen.
+              <br />
+              Ein Anspruch: Es muss wirken.
+            </>
+          }
+          text="Wir betreuen keine Kanäle im Vakuum. Jede Disziplin zahlt auf dasselbe System ein — von Strategie bis Umsetzung."
+        />
 
-        <div className="mt-14 grid grid-cols-12 gap-5">
+        <div className="grid gap-5 sm:grid-cols-2">
           {serviceGroups.map((group, i) => (
             <GroupCard key={group.en} group={group} index={i} />
           ))}

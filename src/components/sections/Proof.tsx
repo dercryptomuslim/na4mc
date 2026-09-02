@@ -1,64 +1,45 @@
-import { clientLogos, proof } from '../../content/home'
-import { Reveal, useCountUp, useInView } from '../../lib/motion'
+import { proof } from '../../content/home'
+import { useCountUp, useInView } from '../../lib/motion'
+import { Panel, SectionHeader } from '../ui/Panel'
 
-function Stat({ stat, index }: { stat: (typeof proof.stats)[number]; index: number }) {
+function Stat({ stat, index, last }: { stat: (typeof proof.stats)[number]; index: number; last: boolean }) {
   const { ref, inView } = useInView<HTMLDivElement>(0.5)
   const value = useCountUp(stat.value, inView, { decimals: stat.decimals })
 
   return (
     <div
       ref={ref}
-      className={`rv border-t border-ink/10 pt-6 ${inView ? 'in' : ''}`}
+      className={`rv px-6 py-8 sm:px-9 sm:py-10 ${inView ? 'in' : ''} ${
+        last ? '' : 'border-b border-ink/[0.07] lg:border-b-0 lg:border-r'
+      }`}
       style={{ '--rv-delay': `${index * 90}ms` } as React.CSSProperties}
     >
-      <p className="whitespace-nowrap text-[clamp(2.2rem,4.6vw,4.25rem)] font-medium leading-none tracking-[-0.03em] text-ink tabular-nums">
+      <p className="whitespace-nowrap text-[clamp(2.1rem,3.6vw,3.4rem)] font-medium leading-none tracking-[-0.03em] text-ink tabular-nums">
         {value.replace('.', ',')}
-        <span className="text-accent">{stat.suffix}</span>
+        <span className="text-accent-soft">{stat.suffix}</span>
       </p>
-      <p className="mt-3 text-sm leading-relaxed text-ink/60">{stat.label}</p>
+      <p className="mt-3 text-sm leading-relaxed text-ink/55">{stat.label}</p>
     </div>
   )
 }
 
 export default function Proof() {
   return (
-    <section className="border-t border-ink/5 py-24 sm:py-36">
+    <section className="py-20 sm:py-28">
       <div className="mx-auto max-w-7xl px-5 sm:px-8">
-        <Reveal>
-          <p className="rv mb-5 text-[11px] font-semibold uppercase tracking-label text-accent-soft">
-            {proof.label}
-          </p>
-        </Reveal>
-        <Reveal>
-          <h2 className="rv max-w-xl text-[clamp(2rem,4.5vw,3.5rem)] font-medium leading-[1.02] tracking-[-0.02em] text-ink">
-            {proof.headline}
-          </h2>
-        </Reveal>
+        <SectionHeader
+          label={proof.label}
+          title="Belegt. Nicht behauptet."
+          text="Zahlen aus echter Arbeit mit echtem Budget — keine Hochrechnungen, keine Versprechen."
+        />
 
-        <div className="mt-14 grid grid-cols-2 gap-x-8 gap-y-12 lg:grid-cols-4">
-          {proof.stats.map((stat, i) => (
-            <Stat key={stat.label} stat={stat} index={i} />
-          ))}
-        </div>
-
-        <Reveal delay={150}>
-          <div className="rv mt-20">
-            <p className="mb-8 text-[11px] font-semibold uppercase tracking-label text-ink/35">
-              {proof.logosLabel}
-            </p>
-            <div className="group flex flex-wrap items-center gap-x-12 gap-y-8">
-              {clientLogos.map((logo) => (
-                <img
-                  key={logo.alt}
-                  src={logo.src}
-                  alt={logo.alt}
-                  loading="lazy"
-                  className="h-9 w-auto max-w-[130px] object-contain opacity-60 grayscale invert mix-blend-screen transition-opacity duration-500 group-hover:opacity-95 sm:h-11"
-                />
-              ))}
-            </div>
+        <Panel punchline="Alle Werte stammen aus dem QSK-Case — im Detail eine Sektion weiter.">
+          <div className="grid lg:grid-cols-4">
+            {proof.stats.map((stat, i) => (
+              <Stat key={stat.label} stat={stat} index={i} last={i === proof.stats.length - 1} />
+            ))}
           </div>
-        </Reveal>
+        </Panel>
       </div>
     </section>
   )

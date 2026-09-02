@@ -35,11 +35,12 @@ export default function SystemSection() {
   const header = (
     <>
       <Reveal>
-        <p className="rv mb-5 text-[11px] font-semibold uppercase tracking-label text-accent-soft">
-          03 / System
+        <p className="rv mb-4 flex items-center gap-2.5 text-[11px] font-semibold uppercase tracking-label text-ink/45">
+          <span className="h-1.5 w-1.5 rounded-full bg-accent" aria-hidden="true" />
+          02 — System
         </p>
       </Reveal>
-      <Reveal as="h2" className="in text-[clamp(2rem,4.5vw,3.5rem)] font-medium leading-[1.02] tracking-[-0.02em] text-ink">
+      <Reveal as="h2" className="in text-[clamp(1.9rem,3.8vw,3rem)] font-medium leading-[1.06] tracking-[-0.02em] text-ink">
         <MaskedLines lines={['Nicht nur Marketing.', 'Ein Wachstumssystem.']} />
       </Reveal>
     </>
